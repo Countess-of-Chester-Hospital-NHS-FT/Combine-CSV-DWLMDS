@@ -2,7 +2,7 @@
 # Combine CSV DWLMDS
 
 ### Status
-This project is currently work in progress
+This work is currently complete and is an adhoc piece of work which isn't being maintained.
 
 Unless otherwise specified the CODEOWNER has responsibility for maintaining the code and addressing any security concerns.
 
@@ -15,10 +15,10 @@ Note: No data are shared in this repository
 
 ### Project Structure
 
-* The main code is found in the root of the repo
+* The main code is found in the root of the repo script.R
 
 ### Outputs
-If not already described.
+Outputs the combined csv files to a SQL database.
 
 ### Contributing
 Contributions and identification of issues are welcomed. Please raise any security concerns as an issue.
