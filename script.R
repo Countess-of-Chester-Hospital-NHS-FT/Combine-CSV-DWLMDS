@@ -88,6 +88,14 @@ combined_df <- combined_df |>
          combined_date = today()) |>
   filter(Week_Ending_Date %in% submission_dates$date)
 
+# Convert dates
+combined_df <- combined_df |>
+  mutate(across(c(PERSON_BIRTH_DATE, 
+                  REFERRAL_TO_TREATMENT_PERIOD_START_DATE,
+                  Diagnostic_Clock_Start_Date,
+                  Planned_Diagnostic_Due_Date), dmy)) |>
+  mutate(DATE_AND_TIME_DATA_SET_CREATED = dmy_hms(DATE_AND_TIME_DATA_SET_CREATED))
+
 ############### Write data to the database #####################################
 #stop("Temp stop") # for development
 
